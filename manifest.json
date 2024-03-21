@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "ImpakTz",
+    "version": "1.0",
+    "description": "Hackathon Web-3",
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
+  
