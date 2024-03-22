@@ -1,3 +1,5 @@
+document.querySelector('.reject').addEventListener
+
 // Fonction pour ouvrir l'onglet sélectionné
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -23,3 +25,4 @@ tabButtons.forEach(function(button) {
         openTab(event, this.getAttribute("data-tab")); // Appelle la fonction openTab avec le nom de l'onglet correspondant
     });
 });
+[23:18]

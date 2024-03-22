@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImpakTz Extension</title>
-    <!-- You can link your CSS files here if needed -->
-
-    <link rel="stylesheet" href="./style.css">
+    <title>Web3 Antivirus</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="tab">
         <!-- Bouton pour le premier onglet -->
-        <button class="tablinks" onclick="openTab(event, 'Tab1')">Site</button>
+        <button class="tablinks" data-tab="Tab1">Site</button>
         <!-- Bouton pour le deuxième onglet -->
-        <button class="tablinks" onclick="openTab(event, 'Tab2')">Transaction</button>
+        <button class="tablinks" data-tab="Tab2">Transaction</button>
     </div>
+    <header class="app-header">
+        <!-- Contenu des onglets -->
+        <div id="Tab1" class="tabcontent">
+            <h1>ImpakTz</h1>
+            <div class="risk-status high-risk">
+                <span>Ce site est jugé comme :</span>
+                <h2>Fiable</h2>
+            </div>
+        </header>
     
-    <!-- Contenu des onglets -->
-    <div id="Tab1" class="tabcontent">
-        <h3>Site vérifié </h3>
-        <p>Contenu de l'onglet 1.</p>
-    </div>
+        <section class="transaction-info">
+            <div class="transaction">
+                <h3>Résumé de l'activité :</h3>
+                <div class="currency">
+                    <span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"</span>
+                </div>
+                
+            <div class="gas-fee">
+                <span>Gas fee is reasonable</span>
+                <span class="fee-value">$2.71</span>
+            </div>
+        </section>
+        </div>
     
-    <div id="Tab2" class="tabcontent">
-        <!-- <h3>Onglet 2</h3>
-        <p>Contenu de l'onglet 2.</p> -->
-    </div>
-
-    <h1>Welcome to ImpakTz!</h1>
-    <p>This is the popup for your ImpakTz Chrome Extension.    
-    </p>
-
-    <!-- Certifié -->
-    <!-- <img src="https://f.hellowork.com/blogdumoderateur/2017/09/badge-facebook.png"  width="40" height="40"> -->
-
-    <!-- Warning -->
-    <!-- <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/10885339-attention-jeton-icone-symbole-vecteur-web-illustration-entreprise-marque-exclamation-information-numerique-attention-forme-attention-jeton-rouge-danger-important-erreur-probleme-badge-isole-blanc-s-exclamer-vectoriel.jpg"  width="40" height="40"> -->
-
-
-    <!-- Your popup content goes here -->
-    <script src="./popup.js"></script> <!-- You can link your JavaScript file here -->
-    <script src="./script.js"></script> <!-- You can link your JavaScript file here -->
-
+        <div id="Tab2" class="tabcontent">
+            <!-- <h3>Onglet 2</h3>
+            <p>Contenu de l'onglet 2.</p> -->
+        </div>
     
+
+    <footer class="action-footer">>
+        <p>Les informations fournies ne constituent pas des conseils à des fins financières, juridiques, fiscales, comptables ou d'investissement.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
