@@ -1,8 +1,12 @@
 {
     "manifest_version": 3,
     "name": "ImpakTz",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Hackathon Web-3",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+    },
     "action": {
         "default_popup": "popup.html"
     }
