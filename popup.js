@@ -1,41 +1,16 @@
 // content.js
 console.log("Content script running");
 
-// Wait 1 second for the webpage to load
-setTimeout(() => {
-    // Get the HTML content of the webpage
-    const htmlContent = document.documentElement.outerHTML;
-
-    // Send the HTML content to the extension
-    chrome.runtime.sendMessage({
-        action: "htmlContent",
-        content: htmlContent
-    });
-}, 1000);
-
-console.log("Content script running : go");
-
 
 // Inject a content script into the current tab
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.scripting.executeScript({
-        target: {tabId: tabs[0].id},
-        function: getHtmlContent
+window.onload = function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.scripting.executeScript({
+            target: {tabId: tabs[0].id},
+            function: getHtmlContent
+        });
     });
-});
-// Inject a content script into the current tab
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.scripting.executeScript({
-        target: {tabId: tabs[0].id},
-        function: print_HW
-    });
-});
-
-// This function will be stringified and injected into the webpage to console.log Hello world
-function print_HW() {
-    console.log("Hello world");
 }
-
 
 // This function will be stringified and injected into the webpage
 function getHtmlContent() {
@@ -48,14 +23,29 @@ function getHtmlContent() {
 
     // Get the title
     const title = doc.title;
+    // Get the text
+    const text = doc.body.textContent;
 
     console.log(title);
 
     // Send the HTML content back to the extension
     chrome.runtime.sendMessage({
         action: "htmlContent",
-        content: htmlContent
+        content: htmlContent,
+        title: title,
+        text: text
     });
 
 }
 
+
+// Listen for messages from content script
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    console.log("J'ai reçu un message");
+    if (message.action === "htmlContent") {
+        console.log("title:", message.title, "\ntext:", message.text);
+        // Do something with the HTML content
+        const currencyDiv = document.querySelector('.currency');
+        currencyDiv.innerHTML = '<span>New content qsdmlkfqdsimofjqdsiofiqdsfo</span>';
+    }
+});
