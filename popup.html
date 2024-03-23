@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web3 Antivirus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
     <div class="tab">
@@ -17,10 +19,10 @@
         <!-- Contenu des onglets -->
         <div id="Tab1" class="tabcontent">
             <h1>ImpakTz</h1>
-            <div class="risk-status high-risk">
+            <!--div class="risk-status high-risk">
                 <span>Ce site est jugé comme :</span>
                 <h2>Fiable</h2>
-            </div>
+            </div-->
         </header>
     
         <section class="transaction-info">
@@ -36,15 +38,35 @@
                 <span class="fee-value">$2.71</span>
             </div>
         </section>
+        <section class="chatbot-container">
+            <div class="messages-display" id="chatMessages"></div>
+            <div class="message-input">
+                <input type="text" id="userMessage" placeholder="Posez votre question ici...">
+                <button onclick="sendMessage()" class="send-button">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+        
+        
         </div>
     
         <div id="Tab2" class="tabcontent">
             <!-- <h3>Onglet 2</h3>
             <p>Contenu de l'onglet 2.</p> -->
         </div>
+
+        <!-- Div superposée pour la fenêtre de chat -->
+        <div id="chatOverlay" class="chat-overlay" style="display: none;">
+            <div id="exampleMessages" class="messages-display"></div>
+            <div class="message-input-overlay">
+                <input type="text" id="userMessageOverlay" placeholder="Votre message...">
+                <button onclick="sendOverlayMessage()">Envoyer</button>
+            </div>
+    </div>
     
 
-    <footer class="action-footer">>
+    <footer class="action-footer">
         <p>Les informations fournies ne constituent pas des conseils à des fins financières, juridiques, fiscales, comptables ou d'investissement.</p>
     </footer>
     <script src="script.js"></script>
