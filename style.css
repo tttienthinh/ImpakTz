@@ -11,7 +11,7 @@ body {
 .app-header {
     background-color: #f8f9fa;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -82,9 +82,16 @@ body {
 .action-footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px; /* Réduit le padding vertical */
+    margin-top: 0;
     text-align: center;
+    line-height: 1.4; /* Ajustez selon vos besoins pour réduire l'espace autour du texte */
 }
+
+.section-above-footer {
+    margin-bottom: 0; /* Ou une valeur plus petite pour réduire l'espace */
+}
+
 
 button {
     background-color: #16a085;
@@ -122,3 +129,64 @@ h1{
     top:0;
     margin-bottom: 0px;
 }
+
+
+.chatbot-container {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.message-input {
+    display: flex;
+    align-items: stretch; /* Aligns items vertically */
+    background-color: #fff; /* Background color for the input area */
+    border-radius: 5px;
+    overflow: hidden; /* Keeps child elements inside the input area */
+}
+
+.message-input input {
+    flex-grow: 1; /* Makes input take up available space */
+    padding: 10px;
+    border: none; /* Removes border from input field */
+    outline: none; /* Removes the focus outline */
+    border-radius: 5px 0 0 5px; /* Rounds only the left side corners */
+}
+
+.message-input .send-button {
+    background-color: #5cb85c; /* Background color for the send button */
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0; /* Rounds only the right side corners */
+    cursor: pointer;
+}
+
+/* Styles for Font Awesome icon */
+.fa {
+    color: white;
+}
+
+
+.message.user {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 8px 10px;
+}
+
+.message.bot {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 8px 10px;
+}
+
+.messages-display {
+    display: flex;
+    flex-direction: column;
+}
+
+
