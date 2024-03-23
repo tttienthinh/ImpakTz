@@ -43,9 +43,9 @@ function getHtmlContent() {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log("J'ai reçu un message");
     if (message.action === "htmlContent") {
-        console.log("title:", message.title, "\ntext:", message.text);
+        // console.log("title:", message.title, "\ntext:", message.text);
         // Do something with the HTML content
-        const currencyDiv = document.querySelector('.currency');
-        currencyDiv.innerHTML = '<span>New content qsdmlkfqdsimofjqdsiofiqdsfo</span>';
+        addMessage("bot", message.title);
+        callServer(message.title, question=false);
     }
 });

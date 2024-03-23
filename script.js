@@ -1,6 +1,7 @@
-document.querySelector('.reject').addEventListener
+// document.querySelector('.reject').addEventListener
 
 // Fonction pour ouvrir l'onglet sélectionné
+/*
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -79,4 +80,60 @@ function displayMessage(sender, message) {
     chatMessages.appendChild(messageDiv);
 }
 
+*/
 
+function addMessage(sender, message) {
+    // Affiche le conteneur de messages et cache la section transaction-info
+    var discussion = document.getElementById('discussion');
+    var messageDiv = document.createElement('div');
+    messageDiv.classList.add('message', sender);
+    messageDiv.textContent = message;
+    discussion.appendChild(messageDiv);
+}
+
+var texte0 = "";
+function callServer(texte, question=true) {
+    console.log(texte);
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    if (question) {
+        var targetUrl = `https://impaktz.pythonanywhere.com/route2/?texte=${texte}&texte0=${texte0}`;
+    } else {
+        var targetUrl = `https://impaktz.pythonanywhere.com/route1/?texte=${texte}`;
+    }
+    
+    console.log(targetUrl);
+    fetch(proxyUrl + targetUrl)
+        .then(response => response.text())
+        .then(function(data) {
+            texte0 = data;
+            addMessage("bot", data);
+        });
+}
+
+
+function sendMessage() {
+    console.log("sendMessage");
+    var userMessage = document.getElementById('userMessage').value;
+    if (userMessage.trim() === '') return; // Ne pas envoyer de messages vides
+    console.log("userMessage : ", userMessage);
+    // Vide le champ de saisie
+    document.getElementById('userMessage').value = '';
+    addMessage("user", userMessage)
+    // Ici, vous devriez envoyer 'userMessage' à l'API OpenAI et attendre la réponse
+    callServer(userMessage);
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var button = document.getElementById('send-button');
+    button.addEventListener('click', function() {
+        sendMessage();
+    });
+    // if enter is pressed when in input userMessage
+    var input = document.getElementById('userMessage');
+    input.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+});
