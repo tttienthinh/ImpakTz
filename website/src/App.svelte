@@ -684,7 +684,7 @@ const add_data = async () => {
   </div>
 </header>
 
-<main class="flex items-center justify-center min-h-screen bg-ghost-white-1 mt-marge">
+<main class="mt-large flex items-center justify-center min-h-screen bg-ghost-white-1">
   <div class="container mx-auto px-4 sm:px-8 max-w-3xl">
     <header class="text-center mb-12">
       <h1 class="text-4xl font-bold text-independence">Historique de la voiture</h1>
@@ -1947,6 +1947,7 @@ aside {
 .mt-large {
   margin-top: 4rem; /* Ou la valeur que vous souhaitez pour 'grosse marge' */
 }
+
 
 
 
