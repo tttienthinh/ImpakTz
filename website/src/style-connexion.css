@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Empêche le défilement */
+    background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre du navigateur */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px; /* Ajoute des marges sur les côtés */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    position: absolute; /* Place le header en haut */
+    top: 0; /* Aligne le header en haut de la page */
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.espace-asso {
+    background-color: #e3e3e3;
+    color: #000; /* Texte noir */
+    padding: 20px 0; /* Remplace la largeur par un padding pour prendre toute la largeur */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Empile le texte */
+    align-items: center; /* Centre le texte */
+    justify-content: center; /* Centre le bouton verticalement */
+}
+
+.login-container {
+    text-align: center;
+    width: 300px; /* Largeur du carré */
+    height: 300px; /* Hauteur du carré */
+    background-color: #fff; /* Fond blanc */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+}
+
+
+.input-number {
+    width: auto; /* Pour que la largeur s'ajuste au contenu */
+    height: 40px; /* Hauteur */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ccc; /* Contour fin */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de police */
+    outline: none; /* Supprime la mise en évidence du focus */
+    text-align: center; /* Centre le texte */
+    margin-top: 10px; /* Espacement entre le bouton et l'input */
+    color: #000; /* Texte noir */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Empile le texte */
+    align-items: center; /* Centre le texte */
+    justify-content: center; /* Centre le bouton verticalement */
+}
+
+
+/* Style lorsque l'input est en focus */
+.input-number:focus {
+    border: 2px solid #007bff; /* Contour bleu lorsqu'en focus */
+}
+
+.testClass{
+    color:black;
+}
