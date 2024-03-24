@@ -209,7 +209,7 @@ const add_data = async () => {
             <div class="container">
     
               <div class="hero-content">
-                <h1 class="h1 hero-title">Assurez la transparence et la confiance dans l'achat de votre véhicule d'occasions.</h1>
+                <h1 class="h1 hero-title">Assurez la transparence et la confiance dans l'achat de votre véhicule d'occasion.</h1>
     
                 <p class="hero-text">
                   DigitalRoadPass est un passeport numérique utilisant les NFT pour garantir l'authenticité et l'historique complet de chaque véhicule.
