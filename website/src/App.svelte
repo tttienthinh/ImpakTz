@@ -161,9 +161,9 @@ const add_data = async () => {
       <header class="header" data-header>
         <div class="container">
     
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" alt="Landio logo">
-          </a>
+          <h1>
+            DigitalRoadPass
+          </h1>
     
           <button class="menu-toggle-btn" data-nav-toggle-btn>
             <ion-icon name="menu-outline"></ion-icon>
@@ -203,6 +203,7 @@ const add_data = async () => {
           <!-- 
             - HERO
           -->
+          
     
           <section class="hero" id="hero">
             <div class="container">
@@ -211,13 +212,13 @@ const add_data = async () => {
                 <h1 class="h1 hero-title">Assurez la transparence et la confiance dans l'achat de votre véhicule d'occasions.</h1>
     
                 <p class="hero-text">
-                  CarPassport est un passeport numérique utilisant les NFT pour garantir l'authenticité et l'historique complet de chaque véhicule.
+                  DigitalRoadPass est un passeport numérique utilisant les NFT pour garantir l'authenticité et l'historique complet de chaque véhicule.
                 </p>
     
               </div>
     
               <figure class="hero-banner">
-                <img src="./assets/svelte.svg" alt="Lolo">
+                <img src="https://vusmag.com/wp-content/uploads/2014/05/Fotolia_50766746_Subscription_XXL.jpg" alt="Lolo">
               </figure>
     
             </div>
@@ -327,114 +328,7 @@ const add_data = async () => {
           <!-- 
             - FEATURES
           -->
-    
-          <section class="features" id="features">
-            <div class="container">
-    
-              <h2 class="h2 section-title">Présenter des Features</h2>
-    
-              <p class="section-text">
-                Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis eligendi
-                cumque.
-              </p>
-    
-              <div class="features-wrapper">
-    
-                <figure class="features-banner">
-                  <img src="./assets/images/features-img-1.png" alt="illustration art">
-                </figure>
-    
-                <div class="features-content">
-    
-                  <p class="features-content-subtitle">
-                    <ion-icon name="sparkles"></ion-icon>
-    
-                    <span>CREATIVE FEATURES</span>
-                  </p>
-    
-                  <h3 class="features-content-title">
-                    Build <strong>community</strong> & <strong>conversion</strong> with our suite of <strong>social
-                      tool</strong>
-                  </h3>
-    
-                  <p class="features-content-text">
-                    Temporibus autem quibusdam et aut officiis debitis aut rerum a necessitatibus saepe eveniet ut et
-                    voluptates repudiandae
-                    sint molestiae non recusandae itaque.
-                  </p>
-    
-                  <ul class="features-list">
-    
-                    <li class="features-list-item">
-                      <ion-icon name="layers-outline"></ion-icon>
-    
-                      <p>Donec pede justo fringilla vel nec.</p>
-                    </li>
-    
-                    <li class="features-list-item">
-                      <ion-icon name="megaphone-outline"></ion-icon>
-    
-                      <p>Cras ultricies mi eu turpis hendrerit fringilla.</p>
-                    </li>
-    
-                  </ul>
-    
-                </div>
-    
-              </div>
-    
-              <div class="features-wrapper">
-    
-                <figure class="features-banner">
-                  <img src="./assets/images/features-img-2.png" alt="illustration art">
-                </figure>
-    
-                <div class="features-content">
-    
-                  <p class="features-content-subtitle">
-                    <ion-icon name="sparkles"></ion-icon>
-    
-                    <span>CREATIVE FEATURES</span>
-                  </p>
-    
-                  <h3 class="features-content-title">
-                    We do the work you <strong>stay focused</strong> on <strong>your customers.</strong>
-                  </h3>
-    
-                  <p class="features-content-text">
-                    Temporibus autem quibusdam et aut officiis debitis aut rerum a necessitatibus saepe eveniet ut et
-                    voluptates repudiandae
-                    sint molestiae non recusandae itaque.
-                  </p>
-    
-                  <ul class="features-list">
-    
-                    <li class="features-list-item">
-                      <ion-icon name="rocket-outline"></ion-icon>
-    
-                      <p>Donec pede justo fringilla vel nec.</p>
-                    </li>
-    
-                    <li class="features-list-item">
-                      <ion-icon name="wifi-outline"></ion-icon>
-    
-                      <p>Cras ultricies mi eu turpis hendrerit fringilla.</p>
-                    </li>
-    
-                  </ul>
-    
-                  <div class="btn-group">
-                    <button class="btn btn-primary">Read More</button>
-    
-                    <button class="btn btn-secondary">Buy Now</button>
-                  </div>
-    
-                </div>
-    
-              </div>
-    
-            </div>
-          </section>
+  
     
     
     
@@ -447,11 +341,10 @@ const add_data = async () => {
           <section class="contact" id="contact">
             <div class="container">
     
-              <h2 class="h2 section-title">Contact Us</h2>
+              <h2 class="h2 section-title">Besoin d'information ? Contactez-nous</h2>
     
               <p class="section-text">
-                Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis eligendi
-                cumque.
+                Nous vous fournirons une réponse en 48h
               </p>
     
               <div class="contact-wrapper">
@@ -463,13 +356,13 @@ const add_data = async () => {
                     <div class="input-wrapper">
                       <label for="name">Name*</label>
     
-                      <input type="text" name="name" id="name" required placeholder="Enter Your Name" class="input-field">
+                      <input type="text" name="name" id="name" required placeholder="Saisissez votre nom" class="input-field">
                     </div>
     
                     <div class="input-wrapper">
                       <label for="emai">Email*</label>
     
-                      <input type="text" name="email" id="email" required placeholder="Enter Your Email"
+                      <input type="text" name="email" id="email" required placeholder="Saisissez votre adresse email"
                         class="input-field">
                     </div>
     
@@ -477,11 +370,11 @@ const add_data = async () => {
     
                   <label for="message">Message*</label>
     
-                  <textarea name="message" id="message" required placeholder="Type Your Message"
+                  <textarea name="message" id="message" required placeholder="Votre message :"
                     class="input-field"></textarea>
     
                   <button type="submit" class="btn btn-primary">
-                    <span>Send Message</span>
+                    <span>Envoyer le message</span>
     
                     <ion-icon name="paper-plane-outline"></ion-icon>
                   </button>
@@ -553,7 +446,7 @@ const add_data = async () => {
         <div class="footer-bottom">
           <div class="container">
             <p class="copyright">
-              &copy; 2022 <a href="">codewithsadee</a>. All Right Reserved
+              &copy; 2024 <a href="">DigitalRoadPass</a>. All Right Reserved
             </p>
           </div>
         </div>
@@ -581,6 +474,10 @@ const add_data = async () => {
 
 <header class="header" data-header>
   <div class="container">
+
+    <h1>
+      DigitalRoadPass
+    </h1>
 
     <a href="#" class="logo">
       <img src="./assets/images/logo.svg" alt="Landio logo">
@@ -639,9 +536,9 @@ const add_data = async () => {
 <header class="header" data-header>
   <div class="container">
 
-    <a href="#" class="logo">
-      <img src="./assets/images/logo.svg" alt="Landio logo">
-    </a>
+    <h1>
+      DigitalRoadPass
+    </h1>
 
     <button class="menu-toggle-btn" data-nav-toggle-btn>
       <ion-icon name="menu-outline"></ion-icon>
@@ -715,12 +612,35 @@ const add_data = async () => {
 
 {#if $currentView === 'proprietaire'}
 
+// Place this script tag before your closing tag
+<script>
+  // Wait for the entire content to load
+  document.addEventListener('DOMContentLoaded', (event) => {
+    // Function to toggle accordion content
+    function toggleAccordion(accordionHeader) {
+      // Add 'active' class to header
+      accordionHeader.classList.toggle('active');
+      // Toggle visibility of the next sibling element
+      const content = accordionHeader.nextElementSibling;
+      content.classList.toggle('hidden');
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    }
+
+    // Attach click event listener to accordion headers
+    const accordions = document.querySelectorAll('.accordion-header');
+    accordions.forEach(accordion => {
+      accordion.onclick = () => toggleAccordion(accordion);
+    });
+  });
+</script>
+
+
 <header class="header" data-header>
   <div class="container">
 
-    <a href="#" class="logo">
-      <img src="./assets/images/logo.svg" alt="Landio logo">
-    </a>
+    <h1>
+      DigitalRoadPass
+    </h1>
 
     <button class="menu-toggle-btn" data-nav-toggle-btn>
       <ion-icon name="menu-outline"></ion-icon>
@@ -744,110 +664,83 @@ const add_data = async () => {
 
       </ul>
 
-      <div class="header-actions">
-        <button class="header-action-link" on:click={() => showChangeOwnerPopup = true}>
-          Changer de propriétaire du véhicule
-        </button>
-          <!-- Pop-up de changement de propriétaire -->
-            <!-- Popup pour le changement de propriétaire -->
-            {#if showChangeOwnerPopup}
-            <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
-              <div class="bg-white p-4 rounded-lg shadow-lg">
-                <input type="text" bind:value={change_owner_address} placeholder="Nouvelle adresse du propriétaire">
-                <button on:click={change_owner}>Changer propriétaire</button>
-              </div>
-            </div>
-            {/if}
-        <button class="header-action-link" on:click={disconnectWallet}>Déconnexion</button>
-      </div>
+
     </nav>
   </div>
 </header>
+
 <div>
   <div>
     <input type="text"  bind:value={change_owner_address} >
-    <button on:click={change_owner}>
-      Change Owner
+    <button >
+                        
     </button>
   </div>
 </div>
-<main class="flex items-center justify-center min-h-screen bg-ghost-white-1">
+<main class="flex items-center justify-center min-h-screen bg-ghost-white-1 mt-large">
+  <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
+
+  </div>
   <div class="container mx-auto px-4 sm:px-8 max-w-3xl">
     <header class="text-center mb-12">
       <h1 class="text-4xl font-bold text-independence">Historique de la voiture</h1>
     </header>
     
-    <div class="accordion" id="history-accordion">
-      <!-- Accordion item -->
-      <div class="bg-white rounded-lg shadow-md mb-5">
-        <div class="p-5 border-b">
-          <h2 class="font-bold text-lg text-independence">
-            <button class="accordion-header focus:outline-none w-full text-left">
-              01/01/2021 - Garage Dupont
-              <span class="float-right">
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </span>
-            </button>
-          </h2>
-          <div class="accordion-content hidden">
-            <div class="mt-4">
-              <p>Changement des pneus</p>
-            </div>
-          </div>
-        </div>
+    <div class="c">
+      <input type="checkbox" id="faq-1">
+      <h3 class="accordion-h1"><label class="label-accordion"for="faq-1">01/02/2023 - Garage Jean Renault (Tours)</label></h3>
+      <div class="p">
+        <p>Changement de pneus</p>
       </div>
-      <br>
-      <div class="bg-white rounded-lg shadow-md mb-5">
-        <div class="p-5 border-b">
-          <h2 class="font-bold text-lg text-independence">
-            <button class="accordion-header focus:outline-none w-full text-left">
-              01/01/2021 - Garage Dupont
-              <span class="float-right">
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </span>
-            </button>
-          </h2>
-          <div class="accordion-content hidden">
-            <div class="mt-4">
-              <p>Changement des pneus</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="bg-white rounded-lg shadow-md mb-5">
-        <div class="p-5 border-b">
-          <h2 class="font-bold text-lg text-independence">
-            <button class="accordion-header focus:outline-none w-full text-left">
-              01/01/2021 - Garage Dupont
-              <span class="float-right">
-                <ion-icon name="chevron-down-outline"></ion-icon>
-              </span>
-            </button>
-          </h2>
-          <div class="accordion-content hidden">
-            <div class="mt-4">
-              <p>Changement des pneus</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Repeat for other accordion items -->
     </div>
-  </div>
+    <div class="c">
+      <input type="checkbox" id="faq-2">
+      <h3 class="accordion-h1"><label class="label-accordion" for="faq-2">01/04/2023 - Norauto (Tours)</label></h3>
+      <div class="p">
+        <p>Controle Technique</p>
+      </div>
+    </div>
+    <div class="c">
+      <input type="checkbox" id="faq-3">
+      <h3 class="accordion-h1"><label class="label-accordion" for="faq-3">01/07/2023 - Feu Vert (Tours)</label></h3>
+      <div class="p">
+        <p>Vidange</p>
+      </div>
+    </div>
+
+
 </main>
 
 {/if}
 
 
-
-  </div>
+</div>
 </main>
 
 
 
 
 <style>
+
+.main {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Full height of the viewport */
+  background: var(--ghost-white-1);
+}
+
+.container {
+  max-width: 3xl; /* Or any specific width */
+  margin: 0 auto; /* Center in the available horizontal space */
+}
+
+
+.hero-banner img {
+  border-radius: 20px; /* Adjust the pixel value to the desired radius */
+}
+
 
   /* Ajoutez ceci dans votre balise de style existante */
   .form-container {
@@ -1024,6 +917,7 @@ body { background: var(--white); }
 /*-----------------------------------*\
 #REUSED STYLE
 \*-----------------------------------*/
+
 
 .container { padding-inline: 15px; }
 
@@ -1670,6 +1564,8 @@ transition: var(--transition);
 .container {
   max-width: 525px;
   margin-inline: auto;
+  width: auto; /* Adjust width as necessary */
+  margin: 0 auto; /* Auto margins for horizontal centering */
 }
 
 .section-text {
@@ -1958,11 +1854,9 @@ transition: var(--transition);
   border-radius: 0.25rem;
 }
 
-.accordion-content {
-  background: var(--white);
-  display: none;
-  padding: 1rem;
-  border-top: 1px solid var(--cool-gray);
+
+.accordion-header.active + .accordion-content {
+  display: block;
 }
 
 .accordion-header:hover,
@@ -1979,5 +1873,95 @@ ion-icon {
 .accordion-header.active + .accordion-content {
   display: block;
 }
+
+/* Additional styles for layout */
+.main-layout {
+  display: flex;
+  justify-content: space-evenly; /* Distribute space evenly between the children */
+  align-items: center; /* Align children vertically */
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content-center {
+  flex-grow: 2; /* Allow this element to grow and take up more space */
+  /* Your existing styles for this content */
+}
+
+aside {
+  flex-grow: 1; /* Take up less space than the central content */
+  /* Style for the aside elements */
+}
+
+/* Make sure the accordion content has a transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* When accordion content is not hidden, we want to display it with a smooth transition */
+.accordion-content:not(.hidden) {
+  max-height: 500px; /* Adjust as necessary */
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+div.c{
+  position: relative;
+  margin:2em;
+}
+input{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+  visibility: 0;
+}
+.accordion-h1 {
+  background:steelblue;
+  color:white;
+  padding:0.5em; /* Reduce padding for a smaller header */
+  position: relative;
+}
+label::before {
+  /* Reduce the size of the arrow */
+  content:"";
+  display: inline-block;
+  border: 10px solid transparent;
+  border-left:15px solid white;
+}
+label{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+div.p {
+  max-height:0px; /* Control expanded height here, adjust as needed */
+  overflow: hidden;
+  transition:max-height 0.5s;
+  background-color: white;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+div.p p {
+  padding:1em; /* Reduce padding for smaller content area */
+}
+input:checked ~ h3 label::before{
+  border-left:15px solid transparent;
+  border-top:20px solid white;
+  margin-top:12px;
+  margin-right:10px;
+}
+input:checked ~ h3 ~ div.p{
+  max-height:100px;
+}
+
 
 </style>
