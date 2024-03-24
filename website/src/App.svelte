@@ -578,15 +578,60 @@ const add_data = async () => {
     </body>
 {/if}
 {#if $currentView === 'concessionnaire'}
+
+<header class="header" data-header>
+  <div class="container">
+
+    <a href="#" class="logo">
+      <img src="./assets/images/logo.svg" alt="Landio logo">
+    </a>
+
+    <button class="menu-toggle-btn" data-nav-toggle-btn>
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+
+        <li>
+          <a href="#hero" class="navbar-link"></a>
+        </li>
+
+
+        <li>
+          <a href="#" class="navbar-link"></a>
+        </li>
+
+        <li>
+          <a href="#contact" class="navbar-link"></a>
+        </li>
+
+      </ul>
+
+      <div class="header-actions">
+      
+        <button class="header-action-link" on:click={disconnectWallet}>Déconnexion</button>
+      </div>
+    </nav>
+  </div>
+</header>
 <div>
-  <input type="text" bind:value={create_car_address}>
-  <button on:click={create_car}>Create Car</button>
+  <div>
+    
+  
+  </div>
 </div>
-<div>
-  <input type="text" bind:value={add_verified_address}>
-  <button on:click={add_verified}>Add Verified Account</button>
-  <button on:click={disconnectWallet}>Déconnexion</button>
-</div>
+<main class="dataforme flex items-center justify-center min-h-screen bg-ghost-white-1">
+  <div class="form-container">
+    <input type="text" class="form-input" bind:value={create_car_address}>
+    <button class="form-button" on:click={create_car}>Create Car</button>
+
+    <input type="text" class="form-input" bind:value={add_verified_address}>
+    <button class="form-button"on:click={add_verified}>Add Verified Account</button>
+
+  </div>
+</main>
+
 {/if}
 
 {#if $currentView === 'garagiste'}
@@ -629,13 +674,14 @@ const add_data = async () => {
 </header>
 <div>
   <div>
-
+    
+  
   </div>
 </div>
-<main class="centered-container flex items-center justify-center min-h-screen mx-auto p-6 w-full max-w-4xl bg-white rounded shadow-lg">
+<main class="dataforme flex items-center justify-center min-h-screen bg-ghost-white-1">
   <div class="form-container">
-    <label class="form-label block text-gray-700 text-sm font-bold mb-2" for="add_data_address" >Adresse</label>
-    <input class="form-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="add_data_address" bind:value={add_data_address} placeholder="Entrez l'adresse" />
+    <label class="form-label" for="add_data_address">Adresse</label>
+    <input class="form-input" type="text" id="add_data_address" bind:value={add_data_address} placeholder="Entrez l'adresse" />
 
     <label class="form-label" for="add_data_text">Exemple de donnée textuelle</label>
     <input class="form-input" type="text" id="add_data_text" bind:value={add_data_text} placeholder="Entrez les données" />
@@ -805,18 +851,34 @@ const add_data = async () => {
 
   /* Ajoutez ceci dans votre balise de style existante */
   .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    max-width: 400px; /* Largeur maximale du formulaire */
-    margin: auto;
-    background: var(--white);
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; /* Plus de padding pour un bloc plus grand */
+  max-width: 600px; /* Largeur maximale ajustée pour un bloc plus grand */
+  width: 100%; /* Utilisez toute la largeur possible jusqu'à max-width */
+  margin: auto; /* Centre horizontalement */
+  box-sizing: border-box; /* S'assure que padding est inclus dans la largeur */
+  background: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Positionnement relatif pour z-index fonctionne */
+  z-index: 10; /* S'assure que le formulaire est au-dessus du fond */
+}
 
+.dataforme{
+
+  display: flex; /* Utilise flexbox pour le centrage */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  min-height: 100vh; /* Hauteur minimale de la fenêtre de visualisation */
+  background: var(--ghost-white-1); /* Couleur de fond */
+  padding: 0; /* Pas de padding */
+  margin: 0; /* Pas de marges externes */
+  box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur et hauteur */
+
+}
   .form-input {
     background: var(--ghost-white-2);
     border: 1px solid var(--cool-gray);
@@ -832,61 +894,27 @@ const add_data = async () => {
   }
 
   .form-button {
-    background-color: var(--majorelle-blue);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    font-weight: var(--fw-700);
-    text-transform: uppercase; /* Optionnel */
-    cursor: pointer;
-    border: none;
-  }
+  background-color: var(--majorelle-blue);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: var(--fw-700);
+  text-transform: uppercase; /* Optionnel */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s; /* Transition pour un changement de couleur en douceur */
+}
 
-  .form-button:hover {
-    background-color: var(--majorelle-blue-dark); /* Assurez-vous que cette couleur est définie dans :root */
-  }
+/* Si vous voulez conserver un effet au survol mais pas blanc, assurez-vous que la couleur est correctement définie */
+.form-button:hover {
+  background-color: var(--majorelle-blue); /* Gardez la même couleur au survol */
+}
 
   .form-label {
     text-align: left;
     width: 100%;
     color: var(--independence);
     margin-bottom: 0.5rem;
-  }
-
-  .centered-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-
-  .data-entry {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .data-entry input[type='text'] {
-    border: 1px solid var(--cool-gray);
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    width: 100%;
-  }
-
-  .data-entry button {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background: var(--majorelle-blue);
-    color: var(--white);
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-
-  .data-entry button:hover {
-    background: darken(var(--majorelle-blue), 10%);
   }
 
 :root {
