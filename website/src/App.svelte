@@ -664,57 +664,97 @@ const add_data = async () => {
 
       </ul>
 
-
+      <div class="header-actions">
+        <button class="header-action-link" on:click={() => showChangeOwnerPopup = true}>
+          Changer de propriétaire du véhicule
+        </button>
+          <!-- Pop-up de changement de propriétaire -->
+            <!-- Popup pour le changement de propriétaire -->
+            {#if showChangeOwnerPopup}
+            <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <input type="text" bind:value={change_owner_address} placeholder="Nouvelle adresse du propriétaire">
+                <button on:click={change_owner}>Changer propriétaire</button>
+              </div>
+            </div>
+            {/if}
+        <button class="header-action-link" on:click={disconnectWallet}>Déconnexion</button>
+      </div>
     </nav>
   </div>
 </header>
 
-<div>
-  <div>
-    <input type="text"  bind:value={change_owner_address} >
-    <button >
-                        
-    </button>
-  </div>
-</div>
-<main class="flex items-center justify-center min-h-screen bg-ghost-white-1 mt-large">
-  <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
-
-  </div>
+<main class="flex items-center justify-center min-h-screen bg-ghost-white-1 mt-marge">
   <div class="container mx-auto px-4 sm:px-8 max-w-3xl">
     <header class="text-center mb-12">
       <h1 class="text-4xl font-bold text-independence">Historique de la voiture</h1>
     </header>
     
-    <div class="c">
-      <input type="checkbox" id="faq-1">
-      <h3 class="accordion-h1"><label class="label-accordion"for="faq-1">01/02/2023 - Garage Jean Renault (Tours)</label></h3>
-      <div class="p">
-        <p>Changement de pneus</p>
+    <div class="accordion" id="history-accordion">
+      <!-- Accordion item -->
+      <div class="bg-white rounded-lg shadow-md mb-5">
+        <div class="p-5 border-b">
+          <h2 class="font-bold text-lg text-independence">
+            <button class="accordion-header focus:outline-none w-full text-left">
+              01/01/2021 - Garage Dupont
+              <span class="float-right">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </span>
+            </button>
+          </h2>
+          <div class="accordion-content hidden">
+            <div class="mt-4">
+              <p>Changement des pneus</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="c">
-      <input type="checkbox" id="faq-2">
-      <h3 class="accordion-h1"><label class="label-accordion" for="faq-2">01/04/2023 - Norauto (Tours)</label></h3>
-      <div class="p">
-        <p>Controle Technique</p>
+      <br>
+      <div class="bg-white rounded-lg shadow-md mb-5">
+        <div class="p-5 border-b">
+          <h2 class="font-bold text-lg text-independence">
+            <button class="accordion-header focus:outline-none w-full text-left">
+              01/01/2021 - Garage Dupont
+              <span class="float-right">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </span>
+            </button>
+          </h2>
+          <div class="accordion-content hidden">
+            <div class="mt-4">
+              <p>Changement des pneus</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="c">
-      <input type="checkbox" id="faq-3">
-      <h3 class="accordion-h1"><label class="label-accordion" for="faq-3">01/07/2023 - Feu Vert (Tours)</label></h3>
-      <div class="p">
-        <p>Vidange</p>
+      <br>
+      <div class="bg-white rounded-lg shadow-md mb-5">
+        <div class="p-5 border-b">
+          <h2 class="font-bold text-lg text-independence">
+            <button class="accordion-header focus:outline-none w-full text-left">
+              01/01/2021 - Garage Dupont
+              <span class="float-right">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </span>
+            </button>
+          </h2>
+          <div class="accordion-content hidden">
+            <div class="mt-4">
+              <p>Changement des pneus</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- Repeat for other accordion items -->
     </div>
-
-
+  </div>
 </main>
 
 {/if}
 
 
-</div>
+
+  </div>
 </main>
 
 
@@ -1904,64 +1944,10 @@ aside {
   max-height: 500px; /* Adjust as necessary */
 }
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700");
-*, *::after, *::before{
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
+.mt-large {
+  margin-top: 4rem; /* Ou la valeur que vous souhaitez pour 'grosse marge' */
 }
 
-div.c{
-  position: relative;
-  margin:2em;
-}
-input{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  opacity:0;
-  visibility: 0;
-}
-.accordion-h1 {
-  background:steelblue;
-  color:white;
-  padding:0.5em; /* Reduce padding for a smaller header */
-  position: relative;
-}
-label::before {
-  /* Reduce the size of the arrow */
-  content:"";
-  display: inline-block;
-  border: 10px solid transparent;
-  border-left:15px solid white;
-}
-label{
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-div.p {
-  max-height:0px; /* Control expanded height here, adjust as needed */
-  overflow: hidden;
-  transition:max-height 0.5s;
-  background-color: white;
-  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-div.p p {
-  padding:1em; /* Reduce padding for smaller content area */
-}
-input:checked ~ h3 label::before{
-  border-left:15px solid transparent;
-  border-top:20px solid white;
-  margin-top:12px;
-  margin-right:10px;
-}
-input:checked ~ h3 ~ div.p{
-  max-height:100px;
-}
 
 
 </style>
