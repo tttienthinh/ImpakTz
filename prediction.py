@@ -106,11 +106,12 @@ def render_mpl_table(data, col_width=4.0, row_height=0.625, font_size=14,
             cell.set_facecolor(row_colors[k[0]%len(row_colors)])
             if k[0] != 0 and "202" != cell.get_text().get_text()[:3] and "203" != cell.get_text().get_text()[:3]:  # Change the display format for non-header cells.
                 cell.get_text().set_text(f"{int(cell.get_text().get_text()):,} €".replace(',', ' '))
-    return ax
+    return fig, ax
 
 # Arrondir les valeurs du DataFrame et appliquer le format comptable
 rentabilite_df_rounded = rentabilite_df.round(0).astype(int)
 
 # Création du tableau formaté
 selection = [2,5,7]
-render_mpl_table(rentabilite_df_rounded.iloc[selection].reset_index(), header_columns=0, col_width=2.5)
+fig, ax = render_mpl_table(rentabilite_df_rounded.iloc[selection].reset_index(), header_columns=0, col_width=2.5)
+fig.savefig('tableau_rentabilite.png')
